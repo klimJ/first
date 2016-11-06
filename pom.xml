@@ -19,6 +19,9 @@
         <commons-dbcp.version>1.4</commons-dbcp.version>
         <mysql.version>5.1.24</mysql.version>
         <slf4j.version>1.7.5</slf4j.version>
+        <hibernate.javax.persistence.version>1.0.0.Final</hibernate.javax.persistence.version>
+        <hibernate.version>5.0.3.Final</hibernate.version>
+        <spring-data.version>1.10.2.RELEASE</spring-data.version>
     </properties>
     <dependencies>
         <!-- Spring dependencies -->
@@ -33,12 +36,12 @@
             <artifactId>spring-web</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
 
         <dependency>
             <groupId>org.springframework</groupId>
@@ -50,12 +53,6 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-jpa</artifactId>
-            <version>${spring-data.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-dbcp</groupId>
@@ -73,6 +70,29 @@
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
             <version>${slf4j.version}</version>
+        </dependency>
+        <!--Hibernate And JPA-->
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+            <version>${hibernate.javax.persistence.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId>
+            <version>${hibernate.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>${spring-data.version}</version>
         </dependency>
     </dependencies>
 
